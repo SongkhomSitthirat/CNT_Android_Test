@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">CNTAndroidTest</string>
+    <string name="tab_one">Tab1</string>
+    <string name="tab_two">Tab2</string>
+    <string name="tab_three">Tab3</string>
+    <string name="tab_four">Tab4</string>
+    <string name="label_by_shared_preferences">By Shared Preferences</string>
+    <string name="label_save_datas">Save Datas</string>
+    <string name="label_name">Name:</string>
+    <string name="label_read_datas">Read Datas</string>
+    <string name="label_singleton">Singleton</string>
+    <string name="label_start_a_thread">Start a Thread</string>
+    <string name="label_start_activity_b_for_result">Start Activity B ForResult</string>
+    <string name="label_start_service">Start Service</string>
+    <string name="label_bind_service">Bind Service</string>
+</resources>

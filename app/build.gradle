@@ -1,0 +1,76 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.sitthirat.cntandroidtest"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "androidx.core:core-ktx:$rootProject.kotlinCoreKtxVersion"
+    implementation "androidx.appcompat:appcompat:$rootProject.kotlinCoreKtxVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintLayoutVersion"
+    implementation "androidx.recyclerview:recyclerview:$rootProject.recyclerViewVersion"
+    implementation "com.google.android.material:material:$rootProject.materialVersion"
+
+    //    KTX
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$rootProject.viewModelKtxVersion"
+
+    //    ViewModel and LiveData
+    implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.lifecycleExtensionVersion"
+
+    //    Koin
+    implementation "org.koin:koin-android:$rootProject.koinVersion"
+    implementation "org.koin:koin-androidx-scope:$rootProject.koinVersion"
+    implementation "org.koin:koin-androidx-viewmodel:$rootProject.koinVersion"
+
+    //    Gson
+    implementation "com.google.code.gson:gson:$rootProject.gsonVersion"
+
+    //    Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$rootProject.converterGsonVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.okhttpLoggingVersion"
+
+    //    Coil
+    implementation "io.coil-kt:coil:$rootProject.coilVersion"
+
+    //   Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$rootProject.coroutinesVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$rootProject.coroutinesVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$rootProject.coroutinesVersion"
+}

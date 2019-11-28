@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvSharedPreferenceLabel"
+            style="@style/TextContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/label_by_shared_preferences"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnSave"
+            style="@style/ButtonBlue"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvSharedPreferenceLabel"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="@string/label_save_datas" />
+
+        <Button
+            android:id="@+id/btnRead"
+            style="@style/ButtonBlue"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnSave"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:text="@string/label_read_datas" />
+
+        <TextView
+            android:id="@+id/tvName"
+            style="@style/TextScore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnRead"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/label_name" />
+
+        <Button
+            android:id="@+id/btnSingleton"
+            style="@style/ButtonBlue"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:text="@string/label_singleton" />
+
+        <Button
+            android:id="@+id/btnStartThread"
+            style="@style/ButtonBlue"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnSingleton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:text="@string/label_start_a_thread" />
+
+    </RelativeLayout>
+</layout>
